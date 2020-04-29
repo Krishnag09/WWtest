@@ -61,7 +61,7 @@ class LocationDetailsPage(BasePage):
 		details_location = self.driver.find_element_by_css_selector('div[class=location__name]').text
 		return details_location
 
-	def test_printmeetings(self,day):
+	def printmeetings(self,day):
 		location_hrs = self.driver.find_element_by_xpath("//div[contains(text(),'"+day+"')]")
 		location_hrs_days = location_hrs.find_element_by_xpath('..')
 		meetings = location_hrs_days.find_elements_by_css_selector('div[class=schedule-detailed-day-meetings-item-time]')
